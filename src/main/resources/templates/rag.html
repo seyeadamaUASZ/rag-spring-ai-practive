@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RAG</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/5.3.3/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="p-3">
+    <form method="get" th:action="@{/rag}">
+       <div class="mb-3">
+           <label class="form-label">Ask your question</label>
+           <input class="form-control" type="text" name="query" th:value="${query}">
+           <button class="btn btn-outline-info">Rechercher</button>
+       </div>
+    </form>
+
+    <div class="p-3">
+        <h3>Response : </h3>
+        <div th:text="${response}"></div>
+    </div>
+</div>
+
+</body>
+</html>
